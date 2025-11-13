@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>挨拶</title>
+  </head>
+  <body>
+    <h1>ご挨拶</h1>
+    <p id="message"></p>
+    <p>今日は雪が降っています。</p>
+    <div><button id="btn1">今何時？</button></div>
+
+    <script>
+      document.getElementById('message').innerHTML = 'こんにてゃん！';
+
+      document.getElementById('btn1').addEventListener('click', () => {
+        window.alert(new Date().toLocaleTimeString());
+      })
+    </script>
+  </body>
+</html>

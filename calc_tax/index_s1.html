@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>消費税計算</title>
+  < /head>
+  <body>
+    <h1>消費税計算</h1>
+    <p>商品価格：500円</p>
+    <div>
+      <label for="taxRate">消費税率：</label>
+      <select id="taxRate">
+        <option value="0.05">5%</option>
+        <option value="0.08">8%</option>
+        <option value="0.10" selected>10%</option>
+      </select>
+    </div>
+    <div>
+      <label for="price">価格（円）：</label>
+      <input type="number" id="price" value="500">
+    </div>
+    <button id="calculateBtn">計算する</button>
+    <h2>結果：</h2>
+    <p id="result">ここに結果が表示されます。</p>
+
+    <script>
+      document.getElementById('calculateBtn').addEventListener('click', function() {
+        const taxRate = parseFloat(document.getElementById('taxRate').value);
+        const price = parseFloat(document.getElementById('price').value);
+        const taxAmount = price * taxRate;
+        const totalPrice = price + taxAmount;
+
+        document.getElementById('result').innerText = 
+          `消費税額：${taxAmount.toFixed(2)}円, 合計金額：${totalPrice.toFixed(2)}円`;
+      });
+    </script>
+</html>

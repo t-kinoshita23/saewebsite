@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>バーチャルギャラリー</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../assets/favicon/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <h2>美女 ギャラリー</h2>
+
+    <!-- 🔘 サイズ切り替えボタン -->
+    <div id="controls">
+      <button onclick="setSize('xl')">XL</button>
+      <button onclick="setSize('l')">L</button>
+      <button onclick="setSize('m')">M</button>
+      <button onclick="setSize('s')">S</button>
+    </div>
+
+    <input type="file" id="file-input" accept="image/*" />
+    <button id="add-btn">追加</button>
+    <div id="gallery"></div>
+    
+    /></a>
+
+    <!-- 🖼️ 画像ギャラリー -->
+    <div id="gallery" class="size-m"></div>
+
+    <!-- 🔍 拡大表示モーダル -->
+    <div id="modal" class="hidden">
+      <span id="close">&times;</span>
+      <img id="modal-img" src="" alt="拡大画像" />
+    </div>
+
+    <!-- 📜 スクリプト -->
+    <script src="script.js"></script>
+
+    <!-- ♬ 効果音 -->
+    <audio id="click-sound" src="../assets/sounds/click-on.mp3"></audio>
+    <audio id="click-off" src="../assets/sounds/click-off.mp3"></audio>
+  </body>
+</html>

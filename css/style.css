@@ -1,0 +1,160 @@
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  /* background-color: #f8f9fa;
+  margin: 0;
+  padding: 0; */
+}
+
+header {
+  margin-bottom: 100px;
+}
+
+h1 {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.date {
+  font-size: 300%;
+  font-family: 'Times New Roman', Times, serif;
+  /* color: #888; */
+}
+
+img.example1 {
+  width: 400px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+img.example2 {
+  width: 300px;
+  height: auto;
+  padding-bottom: 1500px;
+}
+
+img.example3 {
+  width: 50px;
+  height: auto;
+  padding-top: 100px;
+}
+
+/* 共通スタイル */
+#gallery {
+  display: grid;
+  gap: 12px;
+  padding: 10px;
+}
+
+.image-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#gallery img {
+  border-radius: 12px; /* ← 角丸の半径（px） */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ← 影の設定 */
+  transition: transform 0.2s;
+}
+
+.image-block img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+  margin-top: 6px;
+  font-size: 0.85em;
+  color: #171717;
+  text-align: center;
+}
+
+#gallery img:hover {
+  transform: scale(1.05); /* ← ホバー時に少し拡大 */
+}
+
+/* 特大サイズ */
+.size-xl {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.size-xl img {
+  width: 100%;
+}
+
+/* 大サイズ */
+.size-l {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+.size-l img {
+  width: 100%;
+}
+
+/* 中サイズ */
+.size-m {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+.size-m img {
+  width: 100%;
+}
+
+/* 小サイズ */
+.size-s {
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 8px;
+}
+.size-s img {
+  width: 100%;
+}
+
+/* モーダルの基本スタイル */
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+}
+
+/* 非表示クラス */
+.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  display: none !important;
+}

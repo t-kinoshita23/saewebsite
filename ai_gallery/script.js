@@ -8,10 +8,10 @@ window,
       { src: '../assets/images/sample11.png', caption: '卓球' },
       { src: '../assets/images/sample12.png', caption: '試合' },
       { src: '../assets/images/sample13.png', caption: '乗馬' },
-      { src: '../assets/images/saeko_01.png', caption: '真実' },
-      { src: '../assets/images/saeko_02.png', caption: '偽画' },
-      { src: '../assets/images/saeko_03.png', caption: '部屋' },
-      { src: '../assets/images/saeko_01.jpg', caption: '脱衣' },
+      { src: '../assets/images/say01.png', caption: '' },
+      { src: '../assets/images/sayuri.png', caption: '' },
+      { src: '../assets/images/ay_01.png', caption: '' },
+      { src: '../assets/images/rey01.png', caption: '' },
     ];
     const gallery = document.getElementById('gallery');
     const modal = document.getElementById('modal');

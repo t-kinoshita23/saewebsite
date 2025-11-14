@@ -12,6 +12,7 @@ window,
       { src: '../assets/images/sayuri.png', caption: 'Sayuri' },
       { src: '../assets/images/akane.png', caption: 'Akane' },
       { src: '../assets/images/rey01.png', caption: 'Ray' },
+      { src: '../assets/images/sample17.png', caption: 'ビーチ' },
     ];
     const gallery = document.getElementById('gallery');
     const modal = document.getElementById('modal');

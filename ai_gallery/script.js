@@ -8,9 +8,9 @@ window,
       { src: '../assets/images/sample11.png', caption: '卓球' },
       { src: '../assets/images/sample12.png', caption: '試合' },
       { src: '../assets/images/sample13.png', caption: '乗馬' },
-      { src: '../assets/images/say01.png', caption: '' },
+      { src: '../assets/images/ai_01.png', caption: '' },
       { src: '../assets/images/sayuri.png', caption: '' },
-      { src: '../assets/images/ay_01.png', caption: '' },
+      { src: '../assets/images/akane.png', caption: '' },
       { src: '../assets/images/rey01.png', caption: '' },
     ];
     const gallery = document.getElementById('gallery');

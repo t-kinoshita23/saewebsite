@@ -17,6 +17,8 @@ window,
       { src: '../assets/images/sayuri04.png', caption: '図書' },
       { src: '../assets/images/sayuri05.png', caption: '外出' },
       { src: '../assets/images/sayuri06.png', caption: '買い物' },
+      { src: '../assets/images/sayuri07.png', caption: '格闘' },
+      { src: '../assets/images/sayuri08.png', caption: '気合だ' },
     ];
     const gallery = document.getElementById('gallery');
     const modal = document.getElementById('modal');

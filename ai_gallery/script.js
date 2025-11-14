@@ -19,7 +19,7 @@ window,
     const closeBtn = document.getElementById('close');
     const clickOffSound = document.getElementById('click-off');
 
-    const imageUrlInput = document.getElementById('image-url');
+    // const imageUrlInput = document.getElementById('image-url');
 
     imageSources.forEach(item => {
       const container = document.createElement('div');

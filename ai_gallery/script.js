@@ -13,6 +13,7 @@ window,
       { src: '../assets/images/akane.png', caption: 'Akane' },
       { src: '../assets/images/rey01.png', caption: 'Ray' },
       { src: '../assets/images/sample17.png', caption: 'ビーチ' },
+      { src: '../assets/images/sayuri02.png', caption: '書庫' },
     ];
     const gallery = document.getElementById('gallery');
     const modal = document.getElementById('modal');

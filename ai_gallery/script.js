@@ -14,6 +14,8 @@ window,
       { src: '../assets/images/rey01.png', caption: 'Ray' },
       { src: '../assets/images/sample17.png', caption: 'ビーチ' },
       { src: '../assets/images/sayuri02.png', caption: '書庫' },
+      { src: '../assets/images/sayuri04.png', caption: '図書' },
+      { src: '../assets/images/sayuri05.png', caption: '外出' },
     ];
     const gallery = document.getElementById('gallery');
     const modal = document.getElementById('modal');

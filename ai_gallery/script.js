@@ -49,7 +49,7 @@ window,
         modal.classList.add('show');
       }
 
-      const caption = document.createElement('div');
+      const caption = document.createElement('caption');
       caption.className = 'caption';
       caption.textContent = item.caption;
 

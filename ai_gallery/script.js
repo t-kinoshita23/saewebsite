@@ -71,6 +71,10 @@ window,
 
     // モーダル閉じるボタン
     closeBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % imageSources.length;
+      showModal(currentIndex);
+
+      // 閉じるボタンの効果音      
       clickOffSound.currentTime = 0;
       clickOffSound.play();
       modal.classList.add('hidden');

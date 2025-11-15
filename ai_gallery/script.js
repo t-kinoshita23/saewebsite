@@ -1,8 +1,7 @@
 window,
   addEventListener('DOMContentLoaded', () => {
-    
-    const gallery = document.getElementById('gallery');  // ギャラリーの親要素を取得
-    const modal = document.getElementById('modal');  
+    const gallery = document.getElementById('gallery'); // ギャラリーの親要素を取得
+    const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
     const closeBtn = document.getElementById('close');
     const clickOffSound = document.getElementById('click-off');

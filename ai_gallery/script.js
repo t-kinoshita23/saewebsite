@@ -4,7 +4,6 @@ window,
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
     const closeBtn = document.getElementById('close');  // 閉じるボタン
-    const clickOffSound = document.getElementById('click-off');  // 閉じるの×ボタン
     const prevBtn = document.getElementById('prev-btn');  // ←左ボタン
     const nextBtn = document.getElementById('next-btn');  // ←右ボタン
 
@@ -19,6 +18,7 @@ window,
       img.style.cursor = 'pointer';
 
       const clickSound = document.getElementById('click-sound');
+      const clickOffSound = document.getElementById('click-off'); // 閉じるの×ボタン
       const leftrightSound = document.getElementById('left-right');
 
       let currentIndex = 0;
@@ -58,13 +58,6 @@ window,
         leftrightSound.currentTime = 0; // 毎回頭から再生
         leftrightSound.play();
       });
-
-      // function openModal(imageSrc) {
-      //   const modal = document.getElementById('modal');
-      //   const modalImg = document.getElementById('modal-img');
-      //   modalImg.src = imageSrc;
-      //   modal.classList.add('show');
-      // }
 
       // キャプション要素
       const caption = document.createElement('caption');

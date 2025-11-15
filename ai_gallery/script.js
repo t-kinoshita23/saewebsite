@@ -6,6 +6,7 @@ window,
     const closeBtn = document.getElementById('close');
     const clickOffSound = document.getElementById('click-off');
 
+    console.log("forEach開始");
     // 配列を順番に処理
     imageSources.forEach(item => {
       const container = document.createElement('div');

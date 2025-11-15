@@ -141,6 +141,24 @@ img.example3 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
+#prev-btn, #next-btn {
+  position: absolute;
+  top: 50%;              /* 縦中央に配置 */
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.6);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#prev-btn {
+  left: 20px;            /* 画面左端から20px */
+}
+
+#next-btn {
+  right: 20px;           /* 画面右端から20px */
+}
+
 #close {
   position: absolute;
   top: 20px;

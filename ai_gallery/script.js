@@ -3,10 +3,12 @@ window,
     const gallery = document.getElementById('gallery'); // ギャラリーの親要素を取得
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
-    const closeBtn = document.getElementById('close');
-    const clickOffSound = document.getElementById('click-off');
+    const closeBtn = document.getElementById('close');  // 閉じるボタン
+    const clickOffSound = document.getElementById('click-off');  // 閉じるの×ボタン
+    const prevBtn = document.getElementById('prev-btn');  // ←左ボタン
+    const nextBtn = document.getElementById('next-btn');  // ←右ボタン
 
-    console.log("forEach開始");
+    console.log('forEach開始');
     // 配列を順番に処理
     imageSources.forEach(item => {
       const container = document.createElement('div');
@@ -18,23 +20,43 @@ window,
       img.style.cursor = 'pointer';
 
       const clickSound = document.getElementById('click-sound');
-      //const clickOffSound = document.getElementById('click-off');
+
+      let currentIndex = 0;
+
       // クリックでモーダル表示
       img.addEventListener('click', () => {
         if (item.src) {
           clickSound.currentTime = 0;
           clickSound.play();
-          modalImg.src = item.src;
-          modal.classList.remove('hidden');
+          currentIndex = imageSources.indexOf(item); // クリックした画像の位置を記録
+          showModal(currentIndex);
         }
       });
 
-      function openModal(imageSrc) {
-        const modal = document.getElementById('modal');
-        const modalImg = document.getElementById('modal-img');
-        modalImg.src = imageSrc;
-        modal.classList.add('show');
+      // モーダル表示用関数
+      function showModal(index) {
+        modalImg.src = imageSources[index].src;
+        modal.classList.remove('hidden');
       }
+
+      // 左右ボタンのイベント
+      prevBtn.addEventListener('click', () => {
+        currentIndex =
+          (currentIndex - 1 + imageSources.length) % imageSources.length;
+        showModal(currentIndex);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % imageSources.length;
+        showModal(currentIndex);
+      });
+
+      // function openModal(imageSrc) {
+      //   const modal = document.getElementById('modal');
+      //   const modalImg = document.getElementById('modal-img');
+      //   modalImg.src = imageSrc;
+      //   modal.classList.add('show');
+      // }
 
       // キャプション要素
       const caption = document.createElement('caption');
@@ -49,9 +71,7 @@ window,
     // モーダル閉じるボタン
     closeBtn.addEventListener('click', () => {
       clickOffSound.currentTime = 0;
-      clickOffSound.play().catch(error => {
-        console.error('Error playing sound:', error);
-      });
+      clickOffSound.play();
       modal.classList.add('hidden');
     });
 

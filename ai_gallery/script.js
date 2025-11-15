@@ -8,7 +8,6 @@ window,
     const prevBtn = document.getElementById('prev-btn');  // ←左ボタン
     const nextBtn = document.getElementById('next-btn');  // ←右ボタン
 
-    console.log('forEach開始');
     // 配列を順番に処理
     imageSources.forEach(item => {
       const container = document.createElement('div');

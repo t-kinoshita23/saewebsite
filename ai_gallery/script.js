@@ -4,7 +4,7 @@ window,
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
     const closeBtn = document.getElementById('close');
-    //const clickOffSound = document.getElementById('click-off');
+    const clickOffSound = document.getElementById('click-off');
 
     console.log("forEach開始");
     // 配列を順番に処理
@@ -18,7 +18,7 @@ window,
       img.style.cursor = 'pointer';
 
       const clickSound = document.getElementById('click-sound');
-      const clickOffSound = document.getElementById('click-off');
+      //const clickOffSound = document.getElementById('click-off');
       // クリックでモーダル表示
       img.addEventListener('click', () => {
         if (item.src) {

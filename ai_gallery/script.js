@@ -1,35 +1,13 @@
 window,
   addEventListener('DOMContentLoaded', () => {
-    const imageSources = [
-      { src: '../assets/images/sample04.png', caption: '絵紗子' },
-      { src: '../assets/images/sample08.png', caption: '聖女' },
-      { src: '../assets/images/sample09.png', caption: '散歩' },
-      { src: '../assets/images/sample10.png', caption: '雪玉' },
-      { src: '../assets/images/sample11.png', caption: '卓球' },
-      { src: '../assets/images/sample12.png', caption: '試合' },
-      { src: '../assets/images/sample13.png', caption: '乗馬' },
-      { src: '../assets/images/ai_01.png', caption: 'AI' },
-      { src: '../assets/images/sayuri.png', caption: 'Sayuri' },
-      { src: '../assets/images/akane.png', caption: 'Akane' },
-      { src: '../assets/images/rey01.png', caption: 'Ray' },
-      { src: '../assets/images/sample17.png', caption: 'ビーチ' },
-      { src: '../assets/images/sayuri02.png', caption: '書庫' },
-      { src: '../assets/images/sayuri04.png', caption: '図書' },
-      { src: '../assets/images/sayuri05.png', caption: '外出' },
-      { src: '../assets/images/sayuri06.png', caption: '買い物' },
-      { src: '../assets/images/sayuri07.png', caption: '格闘' },
-      { src: '../assets/images/sayuri08.png', caption: '気合だ' },
-      { src: '../assets/images/sayuri09.png', caption: 'Party' },
-      { src: '../assets/images/sayuri10.png', caption: 'Party2' },
-    ];
-    const gallery = document.getElementById('gallery');
-    const modal = document.getElementById('modal');
+    
+    const gallery = document.getElementById('gallery');  // ギャラリーの親要素を取得
+    const modal = document.getElementById('modal');  
     const modalImg = document.getElementById('modal-img');
     const closeBtn = document.getElementById('close');
     const clickOffSound = document.getElementById('click-off');
 
-    // const imageUrlInput = document.getElementById('image-url');
-
+    // 配列を順番に処理
     imageSources.forEach(item => {
       const container = document.createElement('div');
       container.className = 'image-block';
@@ -58,6 +36,7 @@ window,
         modal.classList.add('show');
       }
 
+      // キャプション要素
       const caption = document.createElement('caption');
       caption.className = 'caption';
       caption.textContent = item.caption;
@@ -80,36 +59,4 @@ window,
     window.setSize = function (size) {
       gallery.className = 'size-' + size;
     };
-
-    // 画像追加ボタン
-    const fileInput = document.getElementById('file-input');
-    const addBtn = document.getElementById('add-btn');
-    addBtn.addEventListener('click', () => {
-      const file = fileInput.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-          const img = document.createElement('img');
-          img.src = e.target.result;
-          img.classList.add('thumb');
-          gallery.appendChild(img);
-        };
-        reader.readAsDataURL(file);
-      }
-    });
-
-    // 画像追加関数
-    function addImage(url) {
-      const img = document.createElement('img');
-      img.src = url;
-      img.classList.add('thumb');
-      img.addEventListener('click', () => {
-        clickSound.currentTime = 0;
-        clickSound.play();
-        modalImg.src = img.src;
-        modal.classList.remove('hidden');
-        openModal(img.src);
-      });
-      gallery.appendChild(img);
-    }
   });

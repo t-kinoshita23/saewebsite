@@ -1,0 +1,23 @@
+const imageSources = [
+  // ギャラリー画像ファイルの配列
+  { src: '../assets/images/sample04.png', caption: '絵紗子' },
+  { src: '../assets/images/sample08.png', caption: '聖女' },
+  { src: '../assets/images/sample09.png', caption: '散歩' },
+  { src: '../assets/images/sample10.png', caption: '雪玉' },
+  { src: '../assets/images/sample11.png', caption: '卓球' },
+  { src: '../assets/images/sample12.png', caption: '試合' },
+  { src: '../assets/images/sample13.png', caption: '乗馬' },
+  { src: '../assets/images/ai_01.png', caption: 'AI' },
+  { src: '../assets/images/sayuri.png', caption: 'Sayuri' },
+  { src: '../assets/images/akane.png', caption: 'Akane' },
+  { src: '../assets/images/rey01.png', caption: 'Ray' },
+  { src: '../assets/images/sample17.png', caption: 'ビーチ' },
+  { src: '../assets/images/sayuri02.png', caption: '書庫' },
+  { src: '../assets/images/sayuri04.png', caption: '図書' },
+  { src: '../assets/images/sayuri05.png', caption: '外出' },
+  { src: '../assets/images/sayuri06.png', caption: '買い物' },
+  { src: '../assets/images/sayuri07.png', caption: '格闘' },
+  { src: '../assets/images/sayuri08.png', caption: '気合だ' },
+  { src: '../assets/images/sayuri09.png', caption: 'Party' },
+  { src: '../assets/images/sayuri10.png', caption: 'Party2' },
+];

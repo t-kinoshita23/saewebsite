@@ -1,3 +1,39 @@
+html { font-size: 16px; }
+
+.parent {
+  font-size: 20px; /* 親要素は20px */
+}
+
+.child-px {
+  font-size: 16px; /* 常に16px */
+}
+
+.child-em {
+  font-size: 1.5em; /* 親20px × 1.5 = 30px */
+}
+
+.child-rem {
+  font-size: 1.5rem; /* ルート16px × 1.5 = 24px */
+}
+
+/* 1. px 絶対値 */
+.example-sae{
+  font-size: 16px;   /* 常に16ピクセル */
+  margin: 16px;      /* 常に16ピクセルの余白 */
+}
+
+/* 2. em 親要素基準 */
+.example-sayu {
+  font-size: 1.2em;  /* 親のフォントサイズ × 1.2 */
+  margin: 2em;       /* 親のフォントサイズ × 2 */
+}
+
+/* 3. rem ルート基準 */
+.example-sex {
+  font-size: 1.2rem; /* ルート(html)のフォントサイズ × 1.2 */
+  margin: 2rem;      /* ルート(html)のフォントサイズ × 2 */
+}
+
 body {
   font-family: 'Arial', sans-serif;
   text-align: center;

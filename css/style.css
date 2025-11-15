@@ -147,8 +147,15 @@ img.example3 {
   transform: translateY(-50%);
   background: rgba(255,255,255,0.6);
   border: none;
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
+  border-radius: 50%;   /* ← これで丸くなる */
+  width: 40px;          /* ボタンの幅 */
+  height: 40px;         /* ボタンの高さ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;      /* 矢印や記号を大きめに */
 }
 
 #prev-btn {

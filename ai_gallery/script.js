@@ -19,6 +19,7 @@ window,
       img.style.cursor = 'pointer';
 
       const clickSound = document.getElementById('click-sound');
+      const leftrightSound = document.getElementById('left-right');
 
       let currentIndex = 0;
 
@@ -43,11 +44,19 @@ window,
         currentIndex =
           (currentIndex - 1 + imageSources.length) % imageSources.length;
         showModal(currentIndex);
+
+        // 左右ボタンの効果音
+        leftrightSound.currentTime = 0; // 毎回頭から再生
+        leftrightSound.play();
       });
 
       nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % imageSources.length;
         showModal(currentIndex);
+
+        // 左右ボタンの効果音
+        leftrightSound.currentTime = 0; // 毎回頭から再生
+        leftrightSound.play();
       });
 
       // function openModal(imageSrc) {

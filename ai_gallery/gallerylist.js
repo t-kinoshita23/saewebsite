@@ -20,4 +20,8 @@ const imageSources = [
   { src: '../assets/images/sayuri08.png', caption: '気合だ' },
   { src: '../assets/images/sayuri09.png', caption: 'Party' },
   { src: '../assets/images/sayuri10.png', caption: 'Party2' },
+  { src: '../assets/images/saeko1.png', caption: 'Party2' },
+  { src: '../assets/images/saeko2.png', caption: 'Party2' },
+  { src: '../assets/images/saeko03.png', caption: 'Party2' },
+  { src: '../assets/images/saeko04.png', caption: 'Party2' },
 ];

@@ -173,6 +173,13 @@ img.example3 {
   font-size: 2em;
   color: white;
   cursor: pointer;
+  border-radius: 50%;   /* ← これで丸くなる */
+  width: 40px;          /* ボタンの幅 */
+  height: 40px;         /* ボタンの高さ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;      /* 矢印や記号を大きめに */
 }
 
 /* 非表示クラス */

@@ -4,7 +4,7 @@ window,
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
     const closeBtn = document.getElementById('close');
-    const clickOffSound = document.getElementById('click-off');
+    //const clickOffSound = document.getElementById('click-off');
 
     console.log("forEach開始");
     // 配列を順番に処理
